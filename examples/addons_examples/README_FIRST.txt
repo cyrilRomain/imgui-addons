@@ -75,6 +75,7 @@ Currently the extra imgui widgets that are available are:
 							together with plenty of handy methods to perform file system operations and
 							an experimental support for browsing inside zip files (through an additional definition).
 -> imguidatetime:	        a combobox-like for date and time.
+                            (note: mondays are displayed first, unless you define IMGUIDATETIME_DISPLAYSUNDAYFIRST)
 -> imguilistview:			a list view widget with a lot of optional features (setting its height, row sorting through column header clicking, cell editing).
 -> imguitoolbar:			a very flexible imagebutton-bar that can be used inside ImGui Windows (with dynamic layout) and outside (docked at the sides of the screen).
 -> imguipanelmanager:		a mini dock panel layout. Basically it uses imguitoolbar and optionally assigns an ImGui Window to some buttons. Please see main2.cpp for an extensive example on how to use it.

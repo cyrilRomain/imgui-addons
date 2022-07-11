@@ -67,7 +67,11 @@ bool InputDate(const char* label, struct tm& date, const char* format, bool clos
 
     static ImGuiID last_open_combo_id = 0;
 
+#ifdef IMGUIDATETIME_DISPLAYSUNDAYFIRST
+    static bool sunday_first = true; // display sundays first (like before)
+#else
     static bool sunday_first = false; // display mondays first as ISO 8601 suggest
+#endif
     static const int name_buf_size = 64;
     static char day_names[7][name_buf_size] = {""};
     static char month_names[12][name_buf_size] = {""};
