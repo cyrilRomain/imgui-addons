@@ -101,7 +101,7 @@ HEADERS+=  $$IMGUI_BASE_PATH"/imgui.h"						    \
 	   $$IMGUI_BASE_PATH"/addons/imguistring/imguistring.h"			    \
 	   $$IMGUI_BASE_PATH"/addons/imguipanelmanager/imguipanelmanager.h"	    \
 	   $$IMGUI_BASE_PATH"/addons/imguistyleserializer/imguistyleserializer.h"   \
-	   $$IMGUI_BASE_PATH"/addons/imgui_datetime/imgui_datetime.h"	    \
+	   $$IMGUI_BASE_PATH"/addons/imguidatetime/imguidatetime.h"	    \
 	   $$IMGUI_BASE_PATH"/addons/imguinodegrapheditor/imguinodegrapheditor.h"   \
 	   $$IMGUI_BASE_PATH"/addons/imguicodeeditor/imguicodeeditor.h"		    \
 	   $$IMGUI_BASE_PATH"/addons/imguicodeeditor/utf8helper.h"		    \
@@ -181,7 +181,7 @@ OTHER_FILES+= $$IMGUI_BASE_PATH"/addons/imgui_user.inl"				    \
 	   $$IMGUI_BASE_PATH"/addons/imguistyeserializer/imguistyeserializer.cpp"   \
 	   $$IMGUI_BASE_PATH"/addons/imguibindings/imguibindings.cpp"		    \
 	   $$IMGUI_BASE_PATH"/addons/imguibindings/imguistring/imguistring.cpp"	    \
-	   $$IMGUI_BASE_PATH"/addons/imgui_datetime/imgui_datetime.cpp"	    \
+	   $$IMGUI_BASE_PATH"/addons/imguidatetime/imguidatetime.cpp"	    \
 	   $$IMGUI_BASE_PATH"/addons/imguivariouscontrols/imguivariouscontrols.cpp" \
 	   $$IMGUI_BASE_PATH"/addons/imguihelper/imguihelper.cpp"		    \
 	   $$IMGUI_BASE_PATH"/addons/imguistring/imguistring.cpp"		    \

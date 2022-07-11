@@ -15,8 +15,8 @@
 // This below work is a rewrite of the imguidatechooser
 // See https://github.com/Flix01/imgui/tree/imgui_with_addons/addons/imguidatechooser
 
-#ifndef IMGUI_DATETIME_H_
-#define IMGUI_DATETIME_H_
+#ifndef IMGUIDATETIME_H_
+#define IMGUIDATETIME_H_
 
 #ifndef IMGUI_API
 #include <imgui.h>

@@ -74,7 +74,7 @@ Currently the extra imgui widgets that are available are:
 -> imguifilesystem:			this addon provides: chooseFileDialog, chooseFolderDialog, saveFileDialog
 							together with plenty of handy methods to perform file system operations and
 							an experimental support for browsing inside zip files (through an additional definition).
--> imgui_datetime:			a combobox-like date chooser and optional time input.
+-> imguidatetime:	        a combobox-like for date and time.
 -> imguilistview:			a list view widget with a lot of optional features (setting its height, row sorting through column header clicking, cell editing).
 -> imguitoolbar:			a very flexible imagebutton-bar that can be used inside ImGui Windows (with dynamic layout) and outside (docked at the sides of the screen).
 -> imguipanelmanager:		a mini dock panel layout. Basically it uses imguitoolbar and optionally assigns an ImGui Window to some buttons. Please see main2.cpp for an extensive example on how to use it.

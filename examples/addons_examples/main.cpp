@@ -662,7 +662,7 @@ void DrawGL()	// Mandatory
 #       endif //YES_IMGUITINYFILEDIALOGS
 
         // Datetime Test:
-        if (ImGui::TreeNodeEx("imgui_datetime",collapsingHeaderFlags)) {
+        if (ImGui::TreeNodeEx("imguidatetime",collapsingHeaderFlags)) {
 #       ifndef NO_IMGUIDATETIME
         /*struct tm {
   int tm_sec;			 Seconds.	[0-60] (1 leap second)
@@ -2669,7 +2669,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
     // [Optional] Here we just set some fields in the C locale to native (""). The default C locale is ("C"), which is ASCII English AFAIK.
     setlocale(LC_CTYPE, "");        // This might affect the encoding of the imguifilesystem paths (but I'm not sure about it...) [Docs say: selects the character classification category of the C locale]
     //setlocale(LC_COLLATE, "");    // ??? This probably affects the way items are sorted
-    setlocale(LC_TIME, "");         // This affects imgui_datetime (the language of the names of the months)
+    setlocale(LC_TIME, "");         // This affects imguidatetime (the language of the names of the months)
 #   endif //__EMSCRIPTEN__
 
 /*#   ifdef IMGUI_ENABLE_FREETYPE    // Testing only (to remove)
