@@ -67,6 +67,7 @@ bool InputDate(const char* label, struct tm& date, const char* format, bool clos
 
     static ImGuiID last_open_combo_id = 0;
 
+    static bool sunday_first = false; // display mondays first as ISO 8601 suggest
     static const int name_buf_size = 64;
     static char day_names[7][name_buf_size] = {""};
     static char month_names[12][name_buf_size] = {""};
@@ -228,7 +229,7 @@ bool InputDate(const char* label, struct tm& date, const char* format, bool clos
     PushID(cid++);
     for (int dwi = 0; dwi < 7; dwi++)
     {
-        int dw = (dwi+1)%7; // to display mondays first as ISO suggest
+        int dw = sunday_first ? dwi : (dwi+1)%7;
         bool sunday = dw == 0;
 
         BeginGroup(); // one column per day
@@ -249,7 +250,7 @@ bool InputDate(const char* label, struct tm& date, const char* format, bool clos
             if (cday >= 0 && cday<days_in_month)
             {
                 PushID(cid+7*row+dwi);
-                if (dw > 0 && d.tm_wday == 0 && row == 0) // 1st == synday case
+                if (!sunday_first && (dw > 0 && d.tm_wday == 0 && row == 0)) // 1st == synday case
                     TextUnformatted(" ");
                 if (cday <9 ) sprintf(cur_day_str," %.1d",(unsigned char)cday+1);
                 else sprintf(cur_day_str,"%.2d",(unsigned char)cday+1);
@@ -278,7 +279,7 @@ bool InputDate(const char* label, struct tm& date, const char* format, bool clos
                 if (is_today || is_input_date)
                     PopStyleColor();
                 PopID();
-            } else if (!sunday && cday<days_in_month)
+            } else if ((sunday_first || !sunday) && cday<days_in_month)
                 TextUnformatted(" ");
         }
         if (sunday) // sundays
